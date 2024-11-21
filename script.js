@@ -10,6 +10,7 @@ let searchBtn = document.querySelector(".search-btn")
 let description = document.querySelector(".description")
 let app = document.querySelector(".weather-app")
 
+
 let weatherONCityName = async(cityname) =>{
     let url =  `https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIKey}&units=metric`
     try {
@@ -31,32 +32,40 @@ let weatherONCityName = async(cityname) =>{
             // Assuming you can check whether it's day or night, you can do something like:
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's a sunny day!";
+                app.style.backgroundImage = "url('sunny-day.jpeg')";
             } else {
                 description.innerText = "Clear skies tonight!";
+                app.style.backgroundImage = "url('skies-night.jpeg')";
             }
         } else if (desc === "Clouds") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's a cloudy day.";
+                app.style.backgroundImage = "url('cloudy-day.jpeg')";
             } else {
                 description.innerText = "Cloudy night ahead.";
+                app.style.backgroundImage = "url('cloudy-night.jpeg')";
             }
         } else if (desc === "Snow") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's snowing! Stay warm.";
+                app.style.backgroundImage = "url('snow-fall-day.jpeg')";
             } else {
                 description.innerText = "Snowfall at night! Stay cozy.";
+                app.style.backgroundImage = "url('snow-fall-night.jpeg')";
             }
         } else if (desc === "Mist" || desc === "Smoke" || desc === "Haze" || desc === "Dust" || desc === "Fog" || desc === "Sand") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "Hazy and foggy during the day.";
+                app.style.backgroundImage = "url('Hazy-day.jpeg')";
             } else {
                 description.innerText = "Hazy and foggy night.";
+                app.style.backgroundImage = "url('hazy-night.jpeg')";
             }
         } else {
             description.innerText = `Weather condition is, ${desc}`;
+            app.style.backgroundImage = "url('bg-1.jpeg')";
         }
 
-    
         resTemp.innerText = `${temp}°C`
         city.innerText = cityname
         reshumidity.innerText = `${humidity}%`
@@ -95,30 +104,41 @@ let weatherONLocation = async(latitude,longitude) =>{
             // Assuming you can check whether it's day or night, you can do something like:
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's a sunny day!";
+                app.style.backgroundImage = "url('sunny-day.jpeg')";
             } else {
                 description.innerText = "Clear skies tonight!";
+                app.style.backgroundImage = "url('skies-night.jpeg')";
             }
         } else if (desc === "Clouds") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's a cloudy day.";
+
             } else {
                 description.innerText = "Cloudy night ahead.";
+                app.style.backgroundImage = "url('cloudy-night.jpeg')";
             }
         } else if (desc === "Snow") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "It's snowing! Stay warm.";
+                app.style.backgroundImage = "url('snow-fall-day.jpeg')";
             } else {
                 description.innerText = "Snowfall at night! Stay cozy.";
+                app.style.backgroundImage = "url('snow-fall-night.jpeg')";
             }
         } else if (desc === "Mist" || desc === "Smoke" || desc === "Haze" || desc === "Dust" || desc === "Fog" || desc === "Sand") {
             if (icon[icon.length - 1] === "d") {
                 description.innerText = "Hazy and foggy during the day.";
+                app.style.backgroundImage = "url('Hazy-day.jpeg')";
             } else {
                 description.innerText = "Hazy and foggy night.";
+                app.style.backgroundImage = "url('hazy-night.jpeg')";
             }
         } else {
             description.innerText = `Weather condition is, ${desc}`;
+            app.style.backgroundImage = "url('bg-1.jpeg')";
         }
+
+
         resTemp.innerText = `${temp}°C`
         city.innerText = cityname
         reshumidity.innerText = `${humidity}%`
