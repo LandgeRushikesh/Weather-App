@@ -11,7 +11,7 @@
     height: 100vh;
 }
 .weather-app{
-    background-image: url(bg-1.jpg);
+    background-image: url(sunny-day.avif);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 .res-temp{
@@ -54,7 +54,7 @@
 .additional{
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: black;
 }
 .additional *{
     display: flex;
